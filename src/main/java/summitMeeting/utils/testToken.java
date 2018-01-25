@@ -36,7 +36,7 @@ public class testToken {
             if("请求成功".equals(msg)){
                 return true;
             }
-            return true;
+            return false;
         }
         return false;
 

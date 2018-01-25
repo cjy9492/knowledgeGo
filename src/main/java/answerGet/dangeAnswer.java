@@ -53,33 +53,33 @@ public class dangeAnswer implements Runnable{
                 String result=job.get("optionContent").toString();
                 String results=job.get("title").toString();
                 if(i==0){
-                    if(!sougou.equals(results)&&results!=""){
-                        if(title!=""||result!="") {
-                            System.err.println("搜狗的答案是：" + title + " " + result);
+                    if((!sougou.equals(results))&&!"".equals(results)){
+                        if(!"".equals(title)||!"".equals(result)) {
+                            System.out.println("搜狗的答案是：" + title + " " + result);
                             sougou = results;
                         }
                     }
                 }
                 if(i==1){
-                    if(!dange.equals(results)&&results!=""){
-                        if(title!=""||result!="") {
-                            System.err.println("蛋哥的答案是：" + title + " " + result);
+                    if((!dange.equals(results))&&!"".equals(results)){
+                        if(!"".equals(title)||!"".equals(result)) {
+                            System.out.println("蛋哥的答案是：" + title + " " + result);
                             dange = results;
                         }
                     }
                 }
                 if(i==2){
-                    if(!uc.equals(results)&&results!=""){
-                        if(title!=""||result!="") {
-                            System.err.println("UC的答案是：" + title + " " + result);
+                    if((!uc.equals(results))&&!"".equals(results)){
+                        if(!"".equals(title)||!"".equals(result)) {
+                            System.out.println("UC的答案是：" + title + " " + result);
                             uc = results;
                         }
                     }
                 }
                 if(i==3){
-                    if(!car.equals(results)&&results!=""){
-                        if(title!=""||result!="") {
-                            System.err.println("驾车宝典的答案是：" + title + " " + result);
+                    if(!car.equals(results)&&!"".equals(results)){
+                        if(!"".equals(title)||!"".equals(result)) {
+                            System.out.println("驾车宝典的答案是：" + title + " " + result);
                             car = results;
                         }
                     }

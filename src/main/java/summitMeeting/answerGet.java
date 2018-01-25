@@ -39,7 +39,7 @@ public class answerGet {
                 //String html="{\"code\":0,\"msg\":\"成功\",\"data\":{\"event\":{\"answerTime\":10,\"desc\":\"12.电影公司派拉蒙现在的标志中共有多少颗星星？     \",\"displayOrder\":11,\"liveId\":85,\"options\":\"[\\\"20\\\",\\\"22\\\",\\\"24\\\"]\",\"questionId\":981,\"showTime\":1515489182682,\"status\":0,\"type\":\"showQuestion\"},\"type\":\"showQuestion\"}}";
                 if (!html.equals(lastQues)) {
                     lastQues = html;
-                    System.out.println(html);
+                   // System.out.println(html);
                 }
                 JSONObject jsonObject = JSON.parseObject(html);
                 String msg=  jsonObject.getString("msg");
