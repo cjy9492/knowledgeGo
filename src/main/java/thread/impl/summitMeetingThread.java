@@ -19,7 +19,11 @@ public class summitMeetingThread implements doThread {
         dangeAnswer.setUrl("chongding");
         Thread thread1 = new Thread(dangeAnswer);
         thread1.setPriority(5);
+        answerGet.sogouAnswer sogouAnswer = new answerGet.sogouAnswer();
+        sogouAnswer.setApp("cddh");
+        Thread thread2 = new Thread(sogouAnswer);
         thread.start();
         thread1.start();
+        thread2.start();
     }
 }

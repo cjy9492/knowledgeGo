@@ -40,6 +40,10 @@ public class doAnswers implements Runnable{
                     if(!questions.contains(question)){
                         questions.add(question);
                         System.out.println(question);
+                        for (Object answer:answers){
+                            String a=answer.toString();
+                            System.out.println(a);
+                        }
                         String URL ="http://www.baidu.com/s?wd="+ URLEncoder.encode(question, "UTF-8");
                         Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+URL);
                         String num= baiduSearch.findbaidu(question,answers);

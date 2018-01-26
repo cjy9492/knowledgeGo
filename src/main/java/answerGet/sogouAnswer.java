@@ -74,7 +74,7 @@ public class sogouAnswer implements Runnable {
                 String result=job.get("result").toString();
                 String choices=job.get("choices").toString();
                 if(!lastQues.contains(title)){
-                    System.out.println(title);
+                    //System.out.println(title);
                     lastQues.add(title);
                     System.out.println("搜狗推荐的答案为"+result);
                     String URL1 ="http://www.baidu.com/s?wd="+ URLEncoder.encode(title, "UTF-8");
@@ -86,7 +86,7 @@ public class sogouAnswer implements Runnable {
     }
 
     }
-    public static void getanswaercddh(String app,List lastQues) throws Exception {
+    public  void getanswaercddh() throws Exception {
         String URL ="http://140.143.49.31/api/ans2?key="+app;
         CloseableHttpClient client = HttpClientUtil.getnewHttpClient();;
         List quest=new ArrayList();
@@ -115,8 +115,7 @@ public class sogouAnswer implements Runnable {
             //System.out.println(html);
             JSONObject jsonObject = JSON.parseObject(html);
             JSONArray date= jsonObject.getJSONArray("result");
-            for(int i=0;i<date.size();i++){
-                JSONObject job = date.getJSONObject(i);  // 遍历 jsonarray 数组，把每一个对象转成 json 对象
+                JSONObject job = date.getJSONObject(1);  // 遍历 jsonarray 数组，把每一个对象转成 json 对象
                 String title=job.get("title").toString();
                 String result=job.get("result").toString();
                 String choices=job.get("choices").toString();
@@ -124,7 +123,7 @@ public class sogouAnswer implements Runnable {
                     //System.out.println(html);
                     lastQues.add(title);
                     System.out.println("搜狗推荐的答案为【"+result+"】");
-                }
+
 
 
             }
@@ -136,7 +135,8 @@ public class sogouAnswer implements Runnable {
     public void run() {
       while (true){
           try {
-              getanswaer();
+              getanswaercddh();
+              Thread.sleep(500);
           } catch (Exception e) {
               continue;
               //e.printStackTrace();
