@@ -18,7 +18,7 @@ public class doAnswers {
                 long startTime = System.currentTimeMillis();    //获取开始时间
                 String guessid=answerGet.getguessid(cookies);
                 List Answerlist= answerGet.getanswer(guessid,cookies);
-                if(Answerlist.size()!=1){
+                if(Answerlist.size()>1){
                     question = Answerlist.get(0).toString();
                     answers = (List) Answerlist.get(1);
                     if(!questions.contains(question)){

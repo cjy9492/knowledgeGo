@@ -7,9 +7,11 @@
 - 超快的响应速度
 - 全面覆盖百万英雄/芝士超人/冲顶大会/贴吧等多个直播答题类APP
 - 整合了多家ai答案，多维度参考值，答案交叉验证
-
+![成果展示](http://m.qpic.cn/psb?/7d196e8d-bcb0-4b10-96f0-58980105d3ae/G6o1NFd4K6GtqzqD6NwGQZon3N7xu6spx*QaR.WRZ.0!/b/dGcBAAAAAAAA&bo=FQFYAQAAAAADB28!&rf=viewer_4)
+ 
 ## 更新日志
-
+- 2018.01.27
+  - 修复了百度答题的bug
 - 2018.01.25
   - 采用了多线程，提高了运行效率
   - 删除了多余的日志，修复了校验token出现的问题

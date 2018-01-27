@@ -21,6 +21,7 @@ import java.util.List;
 public class sogouAnswer implements Runnable {
     private static String lastQues1="0";
     private String app="";
+    private String errortitle="";
     private List lastQues=new ArrayList();
 
     public List getLastQues() {
@@ -65,6 +66,7 @@ public class sogouAnswer implements Runnable {
             html=html.replace("\"search_infos\":[{}],","");
             String search_infos1=html.substring(html.indexOf("fos\":[{")+7,html.indexOf("}],\"ti"));
             html=html.replace(search_infos1,"");
+            errortitle=html;
             //System.out.println(html);
             JSONObject jsonObject = JSON.parseObject(html);
             JSONArray date= jsonObject.getJSONArray("result");
@@ -138,6 +140,7 @@ public class sogouAnswer implements Runnable {
               getanswaercddh();
               Thread.sleep(500);
           } catch (Exception e) {
+              System.out.println(errortitle);
               continue;
               //e.printStackTrace();
           }
