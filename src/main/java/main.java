@@ -51,7 +51,12 @@ public class main {
                 System.out.println("请配置cookies");
             }
             while (true) {
+                try{
                 baiduTieba.doAnswers.Answers(questions, cookies);
+                Thread.sleep(500);}
+                catch (Exception e){
+                    continue;
+                }
             }
         }
     }
