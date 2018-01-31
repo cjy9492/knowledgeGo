@@ -9,15 +9,11 @@ public class chessSupermanThread implements doThread {
     public void run() {
         cheeseSuperman.doAnswers myThread = new cheeseSuperman.doAnswers();
         Thread thread = new Thread(myThread);
-        answerGet.dangeAnswer dangeAnswer = new answerGet.dangeAnswer();
-        dangeAnswer.setUrl("yingke");
-        Thread thread1 = new Thread(dangeAnswer);
-        answerGet.sogouAnswer sogouAnswer = new answerGet.sogouAnswer();
-        sogouAnswer.setApp("zscr");
-        Thread thread2 = new Thread(sogouAnswer);
+        answerGet.sohuAnswer sohuAnswer = new answerGet.sohuAnswer();
+        sohuAnswer.setId(4);
+        Thread thread3 = new Thread(sohuAnswer);
         thread.start();
-        thread1.start();
-        thread2.start();
+        thread3.start();
     }
 
     public void run(String session) {

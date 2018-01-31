@@ -10,15 +10,11 @@ public class millionHeroThread implements doThread {
     public void run() {
         millionHero.doAnswers myThread = new millionHero.doAnswers();
         Thread thread = new Thread(myThread);
-        answerGet.dangeAnswer dangeAnswer = new answerGet.dangeAnswer();
-        dangeAnswer.setUrl("toutiao");
-        Thread thread1 = new Thread(dangeAnswer);
-        answerGet.sogouAnswer sogouAnswer = new answerGet.sogouAnswer();
-        sogouAnswer.setApp("xigua");
-        Thread thread2 = new Thread(sogouAnswer);
+        answerGet.sohuAnswer sohuAnswer = new answerGet.sohuAnswer();
+        sohuAnswer.setId(1);
+        Thread thread3 = new Thread(sohuAnswer);
         thread.start();
-        thread1.start();
-        thread2.start();
+        thread3.start();
     }
 
     public void run(String session) {

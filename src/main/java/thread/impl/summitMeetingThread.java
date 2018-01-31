@@ -1,5 +1,6 @@
 package thread.impl;
 
+import answerGet.sohuAnswer;
 import thread.doThread;
 
 /**
@@ -14,16 +15,10 @@ public class summitMeetingThread implements doThread {
         summitMeeting.doAnswers myThread = new summitMeeting.doAnswers();
         myThread.setSessison(session);
         Thread thread = new Thread(myThread);
-        thread.setPriority(10);
-        answerGet.dangeAnswer dangeAnswer = new answerGet.dangeAnswer();
-        dangeAnswer.setUrl("chongding");
-        Thread thread1 = new Thread(dangeAnswer);
-        thread1.setPriority(5);
-        answerGet.sogouAnswer sogouAnswer = new answerGet.sogouAnswer();
-        sogouAnswer.setApp("cddh");
-        Thread thread2 = new Thread(sogouAnswer);
+        answerGet.sohuAnswer sohuAnswer = new answerGet.sohuAnswer();
+        sohuAnswer.setId(2);
+        Thread thread3 = new Thread(sohuAnswer);
         thread.start();
-        thread1.start();
-        thread2.start();
+        thread3.start();
     }
 }
