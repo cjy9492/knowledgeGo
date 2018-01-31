@@ -41,7 +41,7 @@ public class DoAnswers implements Runnable{
                         questions.add(question);
                         System.out.println(question);
                         for (Object answer:answers){
-                            String a=answer.toString();
+                            String a=answer.toString().replace(" ","");
                             System.out.println(a);
                         }
                         String URL ="http://www.baidu.com/s?wd="+ URLEncoder.encode(question, "UTF-8");

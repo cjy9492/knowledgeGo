@@ -35,7 +35,7 @@ public class BaiduSearch {
                 String html = EntityUtils.toString(entity1, "utf-8");
                 //System.out.println(html);
                 for (Object op:answers){
-                    String opp=op.toString();
+                    String opp=op.toString().replace(" ","");
                     int num = Count.appearNumber(html,opp);
                     sb.append("\t"+opp+"出现次数为"+num+"\n");
                     if(mumm<num){
@@ -54,7 +54,7 @@ public class BaiduSearch {
         String name1="";
         int mumm=0;
         for (Object b:answers){
-            String bb=b.toString();
+            String bb=b.toString().replace(" ","");
 
 
             CloseableHttpClient client = null;
