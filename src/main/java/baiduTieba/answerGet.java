@@ -1,6 +1,6 @@
-package baiduTieba;
+package baidutieba;
 
-import baiduTieba.utils.UnicodeUtil;
+import baidutieba.utils.UnicodeUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -9,16 +9,11 @@ import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 import utils.HttpClientUtil;
 
 import java.util.ArrayList;
@@ -27,7 +22,7 @@ import java.util.List;
 /**
  * Created by hero on 2018/1/14 0014.
  */
-public class answerGet {
+public class AnswerGet {
     private static String lastQues="0";
     public static List getanswer(String guessid,String cookies) throws Exception {
         String URL ="https://tieba.baidu.com/alaguess/guess/getQuestion";

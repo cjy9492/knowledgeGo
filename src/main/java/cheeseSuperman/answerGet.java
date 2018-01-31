@@ -1,7 +1,5 @@
-package cheeseSuperman;
+package cheesesuperman;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -14,13 +12,12 @@ import org.jsoup.select.Elements;
 import utils.HttpClientUtil;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by hero on 2018/1/14 0014.
  */
-public class answerGet {
+public class AnswerGet {
     private static String lastQues;
     public static List getanswaer(String question, List answers) throws Exception {
         String URL ="https://www.bainianaolai.com/Z/show/platform/yingke";

@@ -1,4 +1,4 @@
-package millionHero;
+package millionhero;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by hero on 2018/1/14 0014.
  */
-public class answerGet {
+public class AnswerGet {
     private static String lastQues;
     public static List getanswaer(String question, List answers) throws Exception {
         String URL ="https://www.bainianaolai.com/Z/show/platform/toutiao";

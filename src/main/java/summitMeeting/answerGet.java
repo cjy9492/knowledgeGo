@@ -1,4 +1,4 @@
-package summitMeeting;
+package summitmeeting;
 
 
 import com.alibaba.fastjson.JSON;
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by chenjy on 2018-01-09.
  */
-public class answerGet {
+public class AnswerGet {
     private static String lastQues;
     public static List getanswaer(String question, List answers,String session) throws Exception {
         String URL ="http://msg.api.chongdingdahui.com/msg/current";

@@ -8,8 +8,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 
-import java.awt.*;
-import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -18,7 +16,7 @@ import java.util.regex.Pattern;
 /**
  * Created by chenjy on 2018-01-09.
  */
-public class baiduSearch {
+public class BaiduSearch {
     public static String findbaidu(String a,List answers ) throws Exception {
 
 
@@ -38,7 +36,7 @@ public class baiduSearch {
                 //System.out.println(html);
                 for (Object op:answers){
                     String opp=op.toString();
-                    int num = count.appearNumber(html,opp);
+                    int num = Count.appearNumber(html,opp);
                     sb.append("\t"+opp+"出现次数为"+num+"\n");
                     if(mumm<num){
                         mumm=num;

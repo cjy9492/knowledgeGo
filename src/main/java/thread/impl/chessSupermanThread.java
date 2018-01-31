@@ -1,15 +1,17 @@
 package thread.impl;
 
-import thread.doThread;
+import answerget.SohuAnswer;
+import cheesesuperman.DoAnswers;
+import thread.DoThread;
 
 /**
  * Created by chenjy on 2018-01-25.
  */
-public class chessSupermanThread implements doThread {
+public class ChessSupermanThread implements DoThread {
     public void run() {
-        cheeseSuperman.doAnswers myThread = new cheeseSuperman.doAnswers();
+        DoAnswers myThread = new DoAnswers();
         Thread thread = new Thread(myThread);
-        answerGet.sohuAnswer sohuAnswer = new answerGet.sohuAnswer();
+        SohuAnswer sohuAnswer = new SohuAnswer();
         sohuAnswer.setId(4);
         Thread thread3 = new Thread(sohuAnswer);
         thread.start();

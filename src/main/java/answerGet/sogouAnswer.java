@@ -1,4 +1,4 @@
-package answerGet;
+package answerget;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * Created by chenjy on 2018-01-23.
  */
-public class sogouAnswer implements Runnable {
+public class SogouAnswer implements Runnable {
     private static String lastQues1="0";
     private String app="";
     private String errortitle="";

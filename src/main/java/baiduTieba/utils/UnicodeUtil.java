@@ -1,4 +1,4 @@
-package baiduTieba.utils;
+package baidutieba.utils;
 
 /**
  * 每六位描述一个字节

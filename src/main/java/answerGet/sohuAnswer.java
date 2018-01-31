@@ -1,4 +1,4 @@
-package answerGet;
+package answerget;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -6,7 +6,6 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -16,7 +15,7 @@ import utils.HttpClientUtil;
 /**
  * Created by hero on 2018/1/24 0024.
  */
-public class sohuAnswer implements Runnable{
+public class SohuAnswer implements Runnable{
     private  String sougou="";
     private  String dange="";
     private  String uc="";

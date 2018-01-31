@@ -1,16 +1,18 @@
 package thread.impl;
 
-import thread.doThread;
+import answerget.SohuAnswer;
+import millionhero.DoAnswers;
+import thread.DoThread;
 
 /**
  * Created by chenjy on 2018-01-25.
  */
-public class millionHeroThread implements doThread {
+public class MillionHeroThread implements DoThread {
 
     public void run() {
-        millionHero.doAnswers myThread = new millionHero.doAnswers();
+        DoAnswers myThread = new DoAnswers();
         Thread thread = new Thread(myThread);
-        answerGet.sohuAnswer sohuAnswer = new answerGet.sohuAnswer();
+        SohuAnswer sohuAnswer = new SohuAnswer();
         sohuAnswer.setId(1);
         Thread thread3 = new Thread(sohuAnswer);
         thread.start();

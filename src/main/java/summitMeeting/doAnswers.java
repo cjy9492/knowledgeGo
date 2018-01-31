@@ -1,6 +1,6 @@
-package summitMeeting;
+package summitmeeting;
 
-import utils.baiduSearch;
+import utils.BaiduSearch;
 
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by hero on 2018/1/11 0011.
  */
-public class doAnswers implements Runnable{
+public class DoAnswers implements Runnable{
     private List questions=new ArrayList();
     private String sessison;
 
@@ -33,7 +33,7 @@ public class doAnswers implements Runnable{
         String question="";
         List answers=new ArrayList();
                 long startTime = System.currentTimeMillis();    //获取开始时间
-                List Answerlist= answerGet.getanswaer(question,answers,sessison);
+                List Answerlist= AnswerGet.getanswaer(question,answers,sessison);
                 if(Answerlist.size()!=1){
                     question = Answerlist.get(0).toString();
                     answers = (List) Answerlist.get(1);
@@ -46,8 +46,8 @@ public class doAnswers implements Runnable{
                         }
                         String URL ="http://www.baidu.com/s?wd="+ URLEncoder.encode(question, "UTF-8");
                         Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+URL);
-                        String num= baiduSearch.findbaidu(question,answers);
-                        String num2= baiduSearch.findbaidu2(question,answers);
+                        String num= BaiduSearch.findbaidu(question,answers);
+                        String num2= BaiduSearch.findbaidu2(question,answers);
                         System.out.println("第一种权重为：\n"+num);
                         System.out.println("第二种权重为：\n"+num2);
                     }

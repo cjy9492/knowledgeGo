@@ -1,21 +1,22 @@
 package thread.impl;
 
-import answerGet.sohuAnswer;
-import thread.doThread;
+import answerget.SohuAnswer;
+import summitmeeting.DoAnswers;
+import thread.DoThread;
 
 /**
  * Created by chenjy on 2018-01-25.
  */
-public class summitMeetingThread implements doThread {
+public class SummitMeetingThread implements DoThread {
     public void run() {
 
     }
 
     public void run(String session) {
-        summitMeeting.doAnswers myThread = new summitMeeting.doAnswers();
+        DoAnswers myThread = new DoAnswers();
         myThread.setSessison(session);
         Thread thread = new Thread(myThread);
-        answerGet.sohuAnswer sohuAnswer = new answerGet.sohuAnswer();
+        SohuAnswer sohuAnswer = new SohuAnswer();
         sohuAnswer.setId(2);
         Thread thread3 = new Thread(sohuAnswer);
         thread.start();

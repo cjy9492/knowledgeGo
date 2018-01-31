@@ -1,8 +1,6 @@
-package cheeseSuperman;
+package cheesesuperman;
 
 
-
-import utils.baiduSearch;
 
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -11,14 +9,14 @@ import java.util.List;
 /**
  * Created by hero on 2018/1/11 0011.
  */
-public class doAnswers implements Runnable{
+public class DoAnswers implements Runnable{
     private List questions=new ArrayList();
     public  void Answers() throws Exception {
         String question="";
 
         List answers=new ArrayList();
                 long startTime = System.currentTimeMillis();    //获取开始时间
-                List Answerlist= answerGet.getanswaer(question,answers);
+                List Answerlist= AnswerGet.getanswaer(question,answers);
                 if(Answerlist.size()!=1){
                     question = Answerlist.get(0).toString();
                     answers = (List) Answerlist.get(1);

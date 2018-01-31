@@ -1,4 +1,4 @@
-package answerGet;
+package answerget;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -11,14 +11,10 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
 import utils.HttpClientUtil;
 
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by hero on 2018/1/24 0024.
  */
-public class dangeAnswer implements Runnable{
+public class DangeAnswer implements Runnable{
     private  String sougou="";
     private  String dange="";
     private  String uc="";

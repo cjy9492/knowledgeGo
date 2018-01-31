@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Created by chenjy on 2018-01-09.
  */
-public class count {
+public class Count {
     /**
      * 获取指定字符串出现的次数
      *
