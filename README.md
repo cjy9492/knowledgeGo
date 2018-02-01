@@ -11,6 +11,8 @@
 ## 运行截图
 ![成果展示](http://m.qpic.cn/psb?/7d196e8d-bcb0-4b10-96f0-58980105d3ae/G6o1NFd4K6GtqzqD6NwGQZon3N7xu6spx*QaR.WRZ.0!/b/dGcBAAAAAAAA&bo=FQFYAQAAAAADB28!&rf=viewer_4)
 ## 更新日志
+- 2018.01.31
+  - 增加了搜狐答题助手的ai答案
 - 2018.01.27
   - 修复了百度答题的bug
 - 2018.01.25
